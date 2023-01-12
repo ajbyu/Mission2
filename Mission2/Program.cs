@@ -7,8 +7,8 @@ namespace Mission2
         public static void Main(string[] args)
         {
             //Set dice with launch arguments
-            int? numDice = null;
-            int? numSides = null;
+            int numDice = 2;
+            int numSides = 6;
 
             if (args.Length == 2)
             {
@@ -27,17 +27,9 @@ namespace Mission2
             //Run simulation
             if (timesToThrow > 0)
             {
-                //Too complex. Refactor.
-                if (numDice != null && numSides != null)
-                {
-                    var results = Simulator.HandleSimulation(timesToThrow, (int)numDice, (int)numSides);
-                    ResultsHandler.PrintResults(results, (int)numDice, (int)numSides);
-                }
-                else
-                {
-                    var results = Simulator.HandleSimulation(timesToThrow);
-                    ResultsHandler.PrintResults(results);
-                }
+                var results = Simulator.HandleSimulation(timesToThrow, numDice, numSides);
+                ResultsHandler.PrintResults(results, numDice, numSides);
+
             }
             else
             {
