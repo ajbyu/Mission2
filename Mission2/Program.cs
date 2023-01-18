@@ -35,6 +35,10 @@ namespace Mission2
             {
                 Console.WriteLine("You must enter a number.");
             }
+
+            //This prevents the program from closing instantly when finished.
+            Console.WriteLine("Enter anything to close.");
+            Console.ReadLine();
         }
     }
 }

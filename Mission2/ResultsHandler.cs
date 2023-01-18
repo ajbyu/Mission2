@@ -19,7 +19,7 @@ namespace Mission2
 
             Console.WriteLine("\nDICE ROLLING SIMULATION RESULTS");
             Console.WriteLine("Each '*' represents 1 % of the total number of rolls.");
-            Console.WriteLine($"Total number of rolls = {totalRolls}.\n");
+            Console.WriteLine($"Total number of rolls = {totalRolls} {numDice}d{sidesOnDice}.\n");
 
             //Unique values
             List<int> uniqueValues = rolls
